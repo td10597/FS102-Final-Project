@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>  
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <h4 class="navbar-brand">New Wave</h4>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto container">
+            <li class="nav-item col-md-3 col-sm-3 active">
+                <button type="button" class="btn btn-outline-info">Main</button></span></a>
+            </li>
+            <li class="nav-item col-md-3 col-sm-3">
+                <button type="button" class="btn btn-outline-info" onclick="document.location=`info.html`">About</button>
+            </li>
+            <li class="nav-item col-md-5 col-sm-5 dropdown">
+                <div class="dropdown col-md">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sign Up
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" id="signAU">Audience</a></li>
+                        <li><a class="dropdown-item" id="signJO">Journalist</a></li>
+                        <li><a class="dropdown-item" id="signPUB">Publisher</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item col-md-1 col-sm-1">
+                <button type="button" class="btn btn-outline-info" id="showProfile">Profile</button>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <!-- Display profile -->
+    <div class="modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="displayProfile" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Your Profile</h5>
+            </div>
+            <div class="modal-body" id="display"></div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Sign up for audience -->
+    <div class="modal fade" id="signAudience" tabindex="-1" role="dialog" aria-labelledby="AudienceSignUp" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Enter the required informations</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row justify-content-center">
+                    <div class="col-md-">
+                        <form>
+                            <div class="form-group">
+                                <label for="UserName">User Name</label>
+                                <input type="text" class="form-control" id="userUQName" placeholder="johndoe1111" required>
+                                <button type="button" class="form-control btn btn-outline-info" id="checkUserA">Check User Name</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" class="form-control" id="userName" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select class="form-control" id="userGender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>   
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="text" class="form-control" id="userEmail" placeholder="name@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="number" class="form-control" id="userPhoneNumber" placeholder="12345678" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="id">Social ID</label>
+                                <input type="text" class="form-control" id="userSID" placeholder="G1234567M" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="form-control btn btn-success" id="submitA">
+                            </div>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+            <div class="modal-footer justify-content-center" class="noticeA"></div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Sign up for journalist -->
+    <div class="modal fade" id="signJournalist" tabindex="-1" role="dialog" aria-labelledby="JournalisySignUp" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Enter the required informations</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row justify-content-center">
+                    <div class="col-md-">
+                        <form>
+                            <div class="form-group">
+                                <label for="UserName">User Name</label>
+                                <input type="text" class="form-control" id="userUQName" placeholder="johndoe1111" required>
+                                <button type="button" class="form-control btn btn-outline-info" id="checkUserJ">Check User Name</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" class="form-control" id="userName" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select class="form-control" id="userGender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="text" class="form-control" id="userEmail" placeholder="name@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="number" class="form-control" id="userPhoneNumber" placeholder="12345678" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="id">Social ID</label>
+                                <input type="text" class="form-control" id="userSID" placeholder="G1234567M" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="news">News Group Info</label>
+                                <textarea class="form-control" id="newsInfo" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="form-control btn btn-success" id="submitJ">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center" id="noticeJ"></div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Sign up for publisher -->
+    <div class="modal fade" id="signPublisher" tabindex="-1" role="dialog" aria-labelledby="PublisherSignUp" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Enter the required informations</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-md-">
+                            <form>
+                                <div class="form-group">
+                                    <label for="UserName">User Name</label>
+                                    <input type="text" class="form-control" id="userUQName" placeholder="johndoe1111" required>
+                                    <button type="button" class="form-control btn btn-outline-info" id="checkUserP">Check User Name</button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" class="form-control" id="userName" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="text" class="form-control" id="userEmail" placeholder="name@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="number" class="form-control" id="userPhoneNumber" placeholder="12345678" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="id">Social ID</label>
+                                    <input type="text" class="form-control" id="userSID" placeholder="G1234567M" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <select class="form-control" id="userGender">
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="news">Publisher Info</label>
+                                    <textarea class="form-control" id="pubsInfo" rows="5" required></textarea>
+                                </div>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="pubLogo">Logo Submission</label>
+                                        <input type="file" class="form-control-file" id="pugLogo" required>
+                                    </div>
+                                </form>
+                                <div class="form-group">
+                                    <input type="submit" class="form-control btn btn-success" id="submitP">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center" id="noticeP"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background image -->
+    <div class="bg-image img-responsive" style=" background-image: url('src/background.png');height: 100vh; ">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <h1 class="text-white mb-0">Welcome to New Wave</h1>
+            </div>
+        </div>        
+        <div class="mask container" style="background-color: rgba(110, 110, 110, 0.2)">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8"><img src="src/location.jpg"></div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12"><img class="loc" src="src/banner.png"></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12"><div id="carouselLogoControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="src/logo.png" class="logo" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="src/logo2.png" class="logo" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="src/logo3.png" class="logo" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="src/logo4.png" class="logo" alt="Fourth slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="src/logo5.png" class="logo" alt="Fifth slide">
+                                </div>
+                            </div>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="mask container" style="background-color: rgba(255, 255, 255, 0.2)">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 summary">
+                            Welcome to the Third New Wave Game Con. Please browse as you please and sign up if you are interested.
+                            You can find more informations about the event on the info tab of our website.
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
+    crossorigin="anonymous"></script>
+    <script src="src/srcipt.js"></script>
+</body>
+</html>
