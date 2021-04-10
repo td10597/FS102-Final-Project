@@ -82,11 +82,11 @@ $(function()
     $(`#submitJ`).click(function()
     {
         let userName = $(`#userUQJName`).val();
-        let fullName = $(`#userName`).val();
-        let Email = $(`#userEmail`).val();
-        let phoneNumber = $(`#userPhoneNumber`).val();
-        let ID = $(`#userSID`).val();
-        let gender = $(`#userGender`).val();
+        let fullName = $(`#userJName`).val();
+        let Email = $(`#userJEmail`).val();
+        let phoneNumber = $(`#userJPhoneNumber`).val();
+        let ID = $(`#userJSID`).val();
+        let gender = $(`#userJGender`).val();
         let newsInfo = $(`#newsInfo`).val();
 
         let userInfo = {
@@ -120,11 +120,11 @@ $(function()
     $(`#submitP`).click(function()
     {
         let userName = $(`#userUQPName`).val();
-        let fullName = $(`#userName`).val();
-        let Email = $(`#userEmail`).val();
-        let phoneNumber = $(`#userPhoneNumber`).val();
-        let ID = $(`#userSID`).val();
-        let gender = $(`#userGender`).val();
+        let fullName = $(`#userPName`).val();
+        let Email = $(`#userPEmail`).val();
+        let phoneNumber = $(`#userPPhoneNumber`).val();
+        let ID = $(`#userPSID`).val();
+        let gender = $(`#userPGender`).val();
         let pubInfo= $(`#pubsInfo`).val();
 
         let userInfo = {
